@@ -1,56 +1,77 @@
 package heritage.restful.blog.controller;
 
 import heritage.restful.blog.Blog;
-import heritage.restful.blog.model.BlogMockedData;
 import org.springframework.web.bind.annotation.RestController;
 
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
 public class BlogController {
 
-    BlogMockedData blogMockedData = BlogMockedData.getInstance();
+    @Autowired
+    BlogRepository blogRepository;
 
     @GetMapping("/blog")
     public List<Blog> index(){
-        return blogMockedData.fetchBlogs();
+        return blogRepository.findAll();
     }
 
     @GetMapping("/blog/{id}")
-    public Blog show(@PathVariable String id){
+    public Optional<Blog> show(@PathVariable String id){
         int blogId = Integer.parseInt(id);
-        return blogMockedData.getBlogById(blogId);
+        return blogRepository.findById(blogId);
     }
 
     @PostMapping("/blog/search")
     public List<Blog> search(@RequestBody Map<String, String> body){
         String searchTerm = body.get("text");
-        return blogMockedData.searchBlogs(searchTerm);
+        return blogRepository.findByTitleContainingOrContentContaining(searchTerm, searchTerm);
     }
 
     @PostMapping("/blog")
     public Blog create(@RequestBody Map<String, String> body){
-        int id = Integer.parseInt(body.get("id"));
         String title = body.get("title");
         String content = body.get("content");
-        return blogMockedData.createBlog(id, title, content);
+        return blogRepository.save(new Blog(title, content));
     }
 
     @PutMapping("/blog/{id}")
     public Blog update(@PathVariable String id, @RequestBody Map<String, String> body){
         int blogId = Integer.parseInt(id);
-        String title = body.get("title");
-        String content = body.get("content");
-        return blogMockedData.updateBlog(blogId, title, content);
+
+        //
+        Optional<Blog> blog = blogRepository.findById(blogId); // returns java8 optional
+        if (blog.isPresent()) {
+            return blog.get();
+        } else {
+            // handle not found, return null or throw
+        }
+        //
+        // getting blog
+        //Blog blog = blogRepository.findById(blogId);
+        blog.setTitle(body.get("title"));
+        blog.setContent(body.get("content"));
+        return blogRepository.save(blog);
     }
+
+    @Override
+    public Blog findOne(int id) {
+        return blogRepository.findById(id);
+    }
+
+
 
     @DeleteMapping("blog/{id}")
     public boolean delete(@PathVariable String id){
         int blogId = Integer.parseInt(id);
-        return blogMockedData.delete(blogId);
+        blogRespository.delete(blogId);
+        return true;
     }
 
 
