@@ -18,61 +18,52 @@ public class BlogController {
     BlogRepository blogRepository;
 
     @GetMapping("/blog")
-    public List<Blog> index(){
+    public List<Blog> index() {
         return blogRepository.findAll();
     }
 
     @GetMapping("/blog/{id}")
-    public Optional<Blog> show(@PathVariable String id){
+    public Optional<Blog> show(@PathVariable String id) {
         int blogId = Integer.parseInt(id);
         return blogRepository.findById(blogId);
     }
 
     @PostMapping("/blog/search")
-    public List<Blog> search(@RequestBody Map<String, String> body){
+    public List<Blog> search(@RequestBody Map<String, String> body) {
         String searchTerm = body.get("text");
         return blogRepository.findByTitleContainingOrContentContaining(searchTerm, searchTerm);
     }
 
     @PostMapping("/blog")
-    public Blog create(@RequestBody Map<String, String> body){
+    public Blog create(@RequestBody Map<String, String> body) {
         String title = body.get("title");
         String content = body.get("content");
         return blogRepository.save(new Blog(title, content));
     }
 
     @PutMapping("/blog/{id}")
-    public Blog update(@PathVariable String id, @RequestBody Map<String, String> body){
+    public Blog update(@PathVariable String id, @RequestBody Map<String, String> body) {
         int blogId = Integer.parseInt(id);
 
         //
-        Optional<Blog> blog = blogRepository.findById(blogId); // returns java8 optional
-        if (blog.isPresent()) {
-            return blog.get();
+        Blog blog = blogRepository.findById(blogId).orElse(null);
+        // returns java8 optional
+        if (blog != null) {
+            blog.setTitle(body.get("title"));
+            blog.setContent(body.get("content"));
+            return blogRepository.save(blog);
         } else {
-            // handle not found, return null or throw
+            return null;
         }
-        //
-        // getting blog
-        //Blog blog = blogRepository.findById(blogId);
-        blog.setTitle(body.get("title"));
-        blog.setContent(body.get("content"));
-        return blogRepository.save(blog);
-    }
-
-    @Override
-    public Blog findOne(int id) {
-        return blogRepository.findById(id);
     }
 
 
-
-    @DeleteMapping("blog/{id}")
-    public boolean delete(@PathVariable String id){
-        int blogId = Integer.parseInt(id);
-        blogRespository.delete(blogId);
-        return true;
+        @DeleteMapping("blog/{id}")
+        public boolean delete (@PathVariable String id){
+            int blogId = Integer.parseInt(id);
+            blogRepository.delete(blogRepository.findById(blogId).orElse(null));
+            return true;
+        }
     }
 
 
-}
