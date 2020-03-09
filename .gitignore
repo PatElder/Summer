@@ -4,6 +4,12 @@
 # Log file
 *.log
 
+#Ignore gradle
+*.gradle
+*.gradle/*
+*.gradlew
+*.gradlew.bat
+
 # BlueJ files
 *.ctxt
 
