@@ -4,22 +4,33 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-    @Controller
-    public class HomeController {
+@Controller
+public class HomeController {
 
-        // inject via application.properties
-        @Value("${welcome.message:test}")
-        private String message = "Hello World";
-
-        @RequestMapping("/")
-        public String welcome(Map<String, Object> model) {
-            model.put("message", this.message);
-            return "welcome";
-        }
-
+    @GetMapping("/")
+    public String root() {
+        return "index";
     }
+
+    @GetMapping("/user")
+    public String userIndex() {
+        return "user/index";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @GetMapping("/access-denied")
+    public String accessDenied() {
+        return "/error/access-denied";
+    }
+
+}
 
