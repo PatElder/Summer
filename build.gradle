@@ -1,24 +1,36 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.0.RELEASE'
+	id 'org.springframework.boot' version '2.2.5.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 }
 
-group = 'com.example'
+group = 'heritage.restful'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
+	maven { url "https://maven.springframework.org/release" }
+	maven { url "https://maven.restlet.org" }
 	mavenCentral()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	runtimeOnly "org.springframework.boot:spring-boot-devtools"
+	runtimeOnly 'mysql:mysql-connector-java'
+	implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	implementation 'org.webjars:jquery:3.4.1'
+	implementation 'org.webjars:bootstrap:4.4.1-1'
+
+	testImplementation 'org.springframework.security:spring-security-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
 
 test {
 	useJUnitPlatform()
 }
+
