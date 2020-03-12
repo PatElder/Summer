@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Manifest-Version: 1.0
 Main-Class: org.springframework.boot.loader.JarLauncher
 Start-Class: heritage.restful.Application
@@ -5,3 +6,12 @@ Spring-Boot-Version: 2.2.5.RELEASE
 Spring-Boot-Classes: BOOT-INF/classes/
 Spring-Boot-Lib: BOOT-INF/lib/
 
+=======
+Manifest-Version: 1.0
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: com.example.restservice.RestServiceApplication
+Spring-Boot-Version: 2.2.0.RELEASE
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+
+>>>>>>> Stashed changes
