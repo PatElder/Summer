@@ -29,8 +29,9 @@ CREATE TABLE IF NOT EXISTS `blog` (
 /*!40000 ALTER TABLE `blog` ENABLE KEYS */;
 
 -- Dumping structure for table summer.hibernate_sequence
-CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
-  `next_val` bigint(20) DEFAULT NULL
+create table hibernate_sequences IF NOT EXISTS(
+    sequence_name VARCHAR NOT NULL,
+    next_val INTEGER NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Dumping data for table summer.hibernate_sequence: ~1 rows (approximately)

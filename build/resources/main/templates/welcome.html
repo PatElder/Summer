@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:th="http://www.thymeleaf.org"
-      layout:decorate="~{fragments/layout}">
+
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
     <title>Secured</title>
 </head>
+
 <body>
 <div class="container">
 <div layout:fragment="content" th:remove="tag">
@@ -14,4 +15,5 @@
 </div>
 </div>
 </body>
+
 </html>
