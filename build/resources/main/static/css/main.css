@@ -1,0 +1,25 @@
+h1 {
+    color: #78ab46;
+}
+
+h4{
+background-color:#dd7127;
+}
+
+.container{
+background-color: #e0b5eb;
+}
+.form-signin{
+background-color:#d996eb;
+}
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+}
+
+footer p {
+    padding: 15px;
+}
