@@ -54,9 +54,9 @@ public class UserController {
         return "login";
     }
 
-    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
-    public String welcome(Model model) {
-        return "welcome";
-    }
+   // @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
+   // public String welcome(Model model) {
+   //     return "welcome";
+   // }
 }
 // https://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/
