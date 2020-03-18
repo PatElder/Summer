@@ -30,7 +30,7 @@ public class HomeController implements SummerController {
         return "welcome";
     }
 
-    @RequestMapping(value = {"/index"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String home(Model model) {
         return "index";
     }
