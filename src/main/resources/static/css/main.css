@@ -4,12 +4,32 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
-h1 {
-    color: #78ab46;
+#logo{
+width:400px;
+height:auto;
 }
 
-h4{
-background-color:#dd7127;
+#logo > img {
+	width: 200px;
+	height: auto;
+	cursor: pointer;
+	margin: 1em 0 0 0;
+}
+
+.container h1,
+h2,
+h3,
+h5,
+h6 {
+	line-height: 1.7em;
+	clear: both;
+	color: rgb(35, 187, 177);
+	justify-content: center;
+	text-align: center;
+}
+
+p {
+	line-height: 1.5em;
 }
 
 .container{
@@ -25,6 +45,7 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: blue;
+    text-align: center;
 }
 
 footer p {
