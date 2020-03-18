@@ -4,9 +4,13 @@
 
 <head>
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
-    <title>Secured</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/static/css/bootstrap.min.css}"/>
+    <script src="../../../resources/js/jquery.min.js" th:src="@{/resources/static/js/jquery.min.js}"></script>
+    <script src="../../../resources/js/bootstrap.min.js" th:src="@{/resources/static/js/bootstrap.min.js}"></script>
+    <title>Welcome </title>
 </head>
-
+<div th:replace="fragments/header :: header">&nbsp;</div>
 <body>
 <div class="container">
 <div layout:fragment="content" th:remove="tag">

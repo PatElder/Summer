@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
 
-    <title>Registration</title>
+    <title>Index</title>
 </head>
+<div th:replace="fragments/header :: header">&nbsp;</div>
 <body>
 <div class="container">
     <h1>Spring Security User Registration with Hibernate and Thymeleaf</h1>
@@ -19,4 +20,6 @@
 <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 
 </body>
+
+<div th:replace="fragments/footer :: footer">&nbsp;</div>
 </html>
