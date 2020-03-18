@@ -4,6 +4,13 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
+#logo > img {
+	width: 110px;
+	height: auto;
+	cursor: pointer;
+	margin: 1em 0 0 0;
+}
+
 h1 {
     color: #78ab46;
 }
