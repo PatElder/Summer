@@ -10,7 +10,9 @@
 
     <title>Registration</title>
 </head>
+<div th:replace="fragments/header :: header">&nbsp;</div>
 <body>
+
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -21,7 +23,7 @@
                 </div>
             </div>
 
-            <h1>Registration</h1>
+            <h3>Registration</h3>
             <form th:action="@{/registration}" th:object="${user}" method="post">
 
                 <p class="error-message"
@@ -117,4 +119,5 @@
 <script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
 
 </body>
+<div th:replace="fragments/footer :: footer">&nbsp;</div>
 </html>

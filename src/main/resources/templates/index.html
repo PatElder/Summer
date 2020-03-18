@@ -9,14 +9,26 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-    <title>Index</title>
+    <title>Home</title>
 </head>
 <div th:replace="fragments/header :: header">&nbsp;</div>
 <body>
 <div class="container">
-    <h1>Spring Security User Registration with Hibernate and Thymeleaf</h1><a class="navbar-brand" th:href="@{/}">
+    <h3>Submissions</h3><a class="navbar-brand" th:href="@{/}"></a>
+    <p>
 
-</a>
+        The gallery is currently accepting submissions by email only. Images should be in JPEG or PDF format, with a maximum of 5 images, or 3MB, whichever is greater.
+
+        Please include “Artist Submission” and your name in the heading of your email.
+
+        Submit to info@bluesummergallery.com.
+    </p>
+
+    <div id="aboutimage">
+        <img th:src="@{./img/image3.jpg}" alt="homeimage"/>
+    </div>
+
+
 </div>
 
 <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
@@ -25,4 +37,5 @@
 </body>
 
 <div th:replace="fragments/footer :: footer">&nbsp;</div>
+
 </html>

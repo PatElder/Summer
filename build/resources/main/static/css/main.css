@@ -1,39 +1,108 @@
 body {
 	margin: 0;
-	color: rgb(59, 58, 58);
+	color: #7a7a7a;
 	font-family: "Roboto", sans-serif;
 }
 
+a{
+text-decoration: none;
+color: #e014dd;
+}
+
+header{
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+}
+
+.nav-main span:hover {
+    text-decoration: underline;
+    text-decoration-color: #e014dd;
+	color: #e014dd;
+}
+
+.nav-main ul {
+	list-style-type: none;
+}
+
+.nav-main a {
+	text-decoration: none;
+	color: #8f8d8e;
+	letter-spacing: 0.1em;
+}
+
+.nav-main li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 1em;
+}
+
+.nav-main a:hover,
+.nav-main a:focus {
+	color: #141414;
+}
+
 #logo > img {
-	width: 110px;
+	width: 200px;
 	height: auto;
 	cursor: pointer;
 	margin: 1em 0 0 0;
 }
-
-h1 {
-    color: #78ab46;
+img {
+	max-width: 100%;
 }
 
-h4{
-background-color:#dd7127;
+#homeimage img {
+	width: 100%;
+	height: auto;
+}
+
+.container h1,
+h2,
+h3,
+h5,
+h6 {
+	line-height: 1.6em;
+	clear: both;
+	color: #525354;
+	justify-content: center;
+	text-align: center;
+	text-transform: uppercase;
+    letter-spacing: 0.4em;
+}
+
+p {
+	line-height: 1.5em;
 }
 
 .container{
-background-color: #e0b5eb;
+ 	width: 80%;
+ 	margin-left: auto;
+ 	margin-right: auto;
+}
+.row{
+display: flex;
+	justify-content: center;
 }
 
-.form-signin{
-background-color:#d996eb;
+.form-group{
+	padding: 10px 10px;
+	margin: 8px 0;
 }
+
 footer {
-    position: fixed;
-    height: 50px;
+    height: 150px;
     bottom: 0;
     width: 100%;
-    background-color: blue;
+    text-align: center;
 }
 
 footer p {
-    padding: 15px;
+    padding: 10px;
 }

@@ -14,7 +14,24 @@
 <body>
 <div class="container">
 <div layout:fragment="content" th:remove="tag">
-    <h1>Welcome to Blue Summer Gallery</h1>
+    <h3>Welcome to Blue Summer Gallery</h3>
+
+    <div id="homeimage">
+        <img th:src="@{./img/manuelalvarez.jpg}" alt="homeimage"/>
+    </div>
+    <p>
+
+        Blue Summer Gallery has been operating since 1991 and is an expansive 5,000 square foot gallery dedicated to exhibiting the works of Canadian and International artists in a welcoming environment allowing visitors to fully engage in the Gallery experience.
+
+        The Gallery showcases an eclectic group of artists featuring works on canvas, original works on paper, photography, sculpture and glass. Artists range from emerging to established, who are held in both private and public collections. The constant rotation of work within the Gallery renews every visit and brings vitality to the space that is unique to Blue Summer Gallery.
+    </p>
+
+    <p>
+
+        Blue Summer Gallery also has a contract division working with the design and architectural community for institutional and hospitality projects. This division can source, procure, frame, and install work for public spaces, including corporations, public lobbies, with the ability to create commissioned works for unique spaces.
+
+        We look forward to having you visit with us to share our passion for art and the Gallery 133 experience. Please take a moment to peruse our website and view a myriad of work by our talented group of artists.
+    </p>
 
     <p><a href="/" th:href="@{/}">Back to home page</a></p>
 
@@ -22,6 +39,7 @@
 
 </div>
 </div>
+<div th:replace="fragments/footer :: footer">&nbsp;</div>
 </body>
 
 </html>
