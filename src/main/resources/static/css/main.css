@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	color: rgb(59, 58, 58);
+	font-family: "Roboto", sans-serif;
+}
+
+#logo{
+width:400px;
+height:auto;
+}
+
+#logo > img {
+	width: 200px;
+	height: auto;
+	cursor: pointer;
+	margin: 1em 0 0 0;
+}
+
+.container h1,
+h2,
+h3,
+h5,
+h6 {
+	line-height: 1.7em;
+	clear: both;
+	color: rgb(35, 187, 177);
+	justify-content: center;
+	text-align: center;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+.container{
+background-color: #e0b5eb;
+}
+
+.form-signin{
+background-color:#d996eb;
+}
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+}
+
+footer p {
+    padding: 15px;
+}

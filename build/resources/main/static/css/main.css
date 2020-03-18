@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	color: rgb(59, 58, 58);
+	font-family: "Roboto", sans-serif;
+}
+
+#logo > img {
+	width: 110px;
+	height: auto;
+	cursor: pointer;
+	margin: 1em 0 0 0;
+}
+
+h1 {
+    color: #78ab46;
+}
+
+h4{
+background-color:#dd7127;
+}
+
+.container{
+background-color: #e0b5eb;
+}
+
+.form-signin{
+background-color:#d996eb;
+}
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+}
+
+footer p {
+    padding: 15px;
+}
