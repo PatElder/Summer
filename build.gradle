@@ -23,6 +23,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
 
+	compileOnly 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.12'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+
 	implementation 'org.webjars:jquery:3.4.1'
 	implementation 'org.webjars:bootstrap:4.4.1-1'
 

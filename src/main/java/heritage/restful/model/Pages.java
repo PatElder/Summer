@@ -3,6 +3,11 @@ package heritage.restful.model;
 
 import javax.persistence.*;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 @Entity
 @Table(name = "pages")
 public class Pages {

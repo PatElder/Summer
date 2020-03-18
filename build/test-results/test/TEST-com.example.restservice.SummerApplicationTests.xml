@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.restservice.SummerApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-17T18:52:52" hostname="DESKTOP-N80UKQI" time="0.008">
+<testsuite name="com.example.restservice.SummerApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-17T20:08:34" hostname="DESKTOP-G4VN0K8" time="0.007">
   <properties/>
-  <testcase name="contextLoads()" classname="com.example.restservice.SummerApplicationTests" time="0.008"/>
+  <testcase name="contextLoads()" classname="com.example.restservice.SummerApplicationTests" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
